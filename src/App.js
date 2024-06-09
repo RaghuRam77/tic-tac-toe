@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import Cell from "./components/Cell";
 import Clearbutton from "./components/ClearButton";
+import './index.css'
+
+
 function App() {
   const [cells, setCells] = useState(["", "", "", "", "", "", "", "", ""]);
   const [go, setGo] = useState("circle");
