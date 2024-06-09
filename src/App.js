@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Cell from "./components/Cell";
-
+import Clearbutton from "./components/ClearButton";
 function App() {
   const [cells, setCells] = useState(["", "", "", "", "", "", "", "", ""]);
   const [go, setGo] = useState("circle");
@@ -58,7 +58,8 @@ function App() {
           />
         ))}
       </div>
-      <p>{winningMessage || message}</p>
+      <p className={`mt-3 text-center ${winningMessage ? 'winning-message' : ''}`}>{winningMessage || message}</p>
+      <Clearbutton cells={cells} setCells={setCells} setWinningMessage={setWinningMessage}></Clearbutton>
     </div>
   );
 }
